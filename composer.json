@@ -11,14 +11,13 @@
 	"autoload": {
 		"classmap": [
 			"app/commands",
-			"app/controllers",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php",
-			"app/libs"
+			"app/tests/TestCase.php"
 		],
 		"psr-0": {
-			"Conqst": "app/"
+			"Conqst\\": "app/domain/",
+			"Controllers\\": "app/"
 		}
 	},
 	"scripts": {
@@ -29,7 +28,6 @@
 			"php artisan clear-compiled"
 		],
         "post-update-cmd":[
-            "php artisan ide-helper:generate",
             "php artisan optimize"
         ],
 		"post-create-project-cmd": [
