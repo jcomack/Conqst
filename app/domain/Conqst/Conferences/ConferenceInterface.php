@@ -1,14 +1,14 @@
-<?php namespace Conqst\Accounts;
+<?php namespace Conqst\Conferences;
 
-interface UserInterface {
+interface ConferenceInterface {
 
     public function getById($id);
 
     public function getByName($name);
 
-    public function getByBirthdate($date);
+    public function getByStartDate($date);
 
-    public function getAmount($amount);
+    public function getAttendees();
 
     public function getByGeoLocation($lang, $lat);
 
